@@ -14,12 +14,16 @@ app.use( express.static( 'public' ) );
 app.get('/', ( req, res ) => {
     res.render( 'home', {
         nombre: 'Alexis',
-        titulo: 'Ejemplo en Node'
+        titulo: 'Curso de Node.js'
     });
 });
 
 app.get('/generic', ( req, res ) => {
-    res.sendFile( __dirname + '/public/generic.html' );
+    // res.sendFile( __dirname + '/public/generic.html' );
+    res.render( 'generic', {
+        nombre: 'Alexis',
+        titulo: 'Generic'
+    });
 });
 
 app.get('/elements', ( req, res ) => {
