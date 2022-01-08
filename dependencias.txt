@@ -1,0 +1,7 @@
+express: npm i express
+
+handlebars: npm i handlebars
+
+hbs: npm install hbs
+
+dotenv: npm dotenv
