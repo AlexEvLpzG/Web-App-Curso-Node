@@ -22,12 +22,16 @@ app.get('/generic', ( req, res ) => {
     // res.sendFile( __dirname + '/public/generic.html' );
     res.render( 'generic', {
         nombre: 'Alexis',
-        titulo: 'Generic'
+        titulo: 'Curso de Node.js'
     });
 });
 
 app.get('/elements', ( req, res ) => {
-    res.sendFile( __dirname + '/public/elements.html' );
+    // res.sendFile( __dirname + '/public/elements.html' );
+    res.render( 'elements', {
+        nombre: 'Alexis',
+        titulo: 'Curso de Node.js'
+    });
 });
 
 // * Para que entre si no exite la ruta en la que estan accediendo
