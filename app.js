@@ -1,14 +1,21 @@
 const express = require( 'express' );
+const hbs = require('hbs');
+
 const app = express();
 const port = 4000;
 
+// * Handlebars
 app.set( 'view engine', 'hbs' );
+hbs.registerPartials( __dirname + '/views/partials' );
 
 // * Servir contenido estático
 app.use( express.static( 'public' ) );
 
 app.get('/', ( req, res ) => {
-    res.render( 'home' );
+    res.render( 'home', {
+        nombre: 'Alexis',
+        titulo: 'Ejemplo en Node'
+    });
 });
 
 app.get('/generic', ( req, res ) => {
